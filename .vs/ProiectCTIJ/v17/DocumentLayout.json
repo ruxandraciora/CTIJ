@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Facultate\\Anul IV\\CTIJ\\ProiectCTIJ\\Assets\\Scripts\\Mechanics\\PlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Mechanics\\PlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Facultate\\Anul IV\\CTIJ\\ProiectCTIJ\\Assembly-CSharp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assembly-CSharp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
@@ -18,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "D:\\Facultate\\Anul IV\\CTIJ\\ProiectCTIJ\\Assets\\Scripts\\Mechanics\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Mechanics\\PlayerController.cs",
+              "ToolTip": "D:\\Facultate\\Anul IV\\CTIJ\\ProiectCTIJ\\Assets\\Scripts\\Mechanics\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Mechanics\\PlayerController.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAwwIoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T13:49:04.193Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,14 +45,14 @@
               "RelativeDocumentMoniker": "Assets\\PlayerMovement.cs",
               "ToolTip": "D:\\Facultate\\Anul IV\\CTIJ\\ProiectCTIJ\\Assets\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\PlayerMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T13:00:21.618Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Assembly-CSharp.csproj",
               "DocumentMoniker": "D:\\Facultate\\Anul IV\\CTIJ\\ProiectCTIJ\\Assembly-CSharp.csproj",
               "RelativeDocumentMoniker": "Assembly-CSharp.csproj",
@@ -43,8 +60,7 @@
               "RelativeToolTip": "Assembly-CSharp.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-29T12:59:35.622Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T12:59:35.622Z"
             }
           ]
         }
