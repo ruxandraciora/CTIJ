@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 54620927}
   - component: {fileID: 54620929}
   - component: {fileID: 54620928}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Potion1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ Transform:
   m_GameObject: {fileID: 54620924}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.49, y: -21.78, z: 0}
+  m_LocalPosition: {x: -16.38, y: 0.39, z: 0}
   m_LocalScale: {x: 0.83736, y: 0.83736, z: 0.83736}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 79193168}
   - component: {fileID: 79193167}
   - component: {fileID: 79193166}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Tilemap (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,7 +727,7 @@ GameObject:
   - component: {fileID: 88198058}
   - component: {fileID: 88198057}
   - component: {fileID: 88198056}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Slime4
   m_TagString: Slime
   m_Icon: {fileID: 0}
@@ -773,7 +773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2374a9b51dce75643b21600d50acbcac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
 --- !u!61 &88198058
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -922,7 +921,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 116472286}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -956,7 +955,7 @@ GameObject:
   - component: {fileID: 144046321}
   - component: {fileID: 144046320}
   - component: {fileID: 144046319}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Tilemap (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1236,7 +1235,7 @@ GameObject:
   - component: {fileID: 211576370}
   - component: {fileID: 211576369}
   - component: {fileID: 211576368}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Slime5
   m_TagString: Slime
   m_Icon: {fileID: 0}
@@ -1282,7 +1281,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2374a9b51dce75643b21600d50acbcac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
 --- !u!61 &211576370
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1524,7 +1522,7 @@ GameObject:
   - component: {fileID: 363557918}
   - component: {fileID: 363557917}
   - component: {fileID: 363557916}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Silme2
   m_TagString: Slime
   m_Icon: {fileID: 0}
@@ -1570,7 +1568,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2374a9b51dce75643b21600d50acbcac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
 --- !u!61 &363557918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1810,7 +1807,7 @@ GameObject:
   - component: {fileID: 400727634}
   - component: {fileID: 400727633}
   - component: {fileID: 400727632}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Tilemap (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2088,7 +2085,7 @@ GameObject:
   - component: {fileID: 537250010}
   - component: {fileID: 537250009}
   - component: {fileID: 537250008}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Tilemap (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2377,7 +2374,7 @@ GameObject:
   - component: {fileID: 540551975}
   - component: {fileID: 540551974}
   - component: {fileID: 540551973}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Tilemap (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2655,7 +2652,7 @@ GameObject:
   - component: {fileID: 590074248}
   - component: {fileID: 590074247}
   - component: {fileID: 590074246}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Tilemap (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2933,7 +2930,7 @@ GameObject:
   - component: {fileID: 644476620}
   - component: {fileID: 644476619}
   - component: {fileID: 644476618}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Tilemap (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3219,7 +3216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 698501519}
   - component: {fileID: 698501518}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3279,7 +3276,7 @@ GameObject:
   - component: {fileID: 989470192}
   - component: {fileID: 989470191}
   - component: {fileID: 989470190}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Tilemap (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3557,7 +3554,7 @@ GameObject:
   - component: {fileID: 1000806393}
   - component: {fileID: 1000806392}
   - component: {fileID: 1000806391}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Tilemap (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3832,7 +3829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1006090212}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: LaunchPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3848,8 +3845,8 @@ Transform:
   m_GameObject: {fileID: 1006090211}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.789257, y: -5.0696864, z: -58.360077}
-  m_LocalScale: {x: 1.2565808, y: 1.5377396, z: 1.4188054}
+  m_LocalPosition: {x: 0.27, y: -0.44, z: -58.360077}
+  m_LocalScale: {x: 0.6408562, y: 1.0412035, z: 1.4188054}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1957117250}
@@ -3864,7 +3861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1040363030}
   - component: {fileID: 1040363031}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3912,7 +3909,7 @@ GameObject:
   - component: {fileID: 1128148305}
   - component: {fileID: 1128148304}
   - component: {fileID: 1128148303}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Slime3
   m_TagString: Slime
   m_Icon: {fileID: 0}
@@ -3958,7 +3955,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2374a9b51dce75643b21600d50acbcac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
 --- !u!61 &1128148305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4110,7 +4106,7 @@ GameObject:
   - component: {fileID: 1195158569}
   - component: {fileID: 1195158568}
   - component: {fileID: 1195158571}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: CinemachineCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4273,7 +4269,7 @@ GameObject:
   - component: {fileID: 1238678900}
   - component: {fileID: 1238678899}
   - component: {fileID: 1238678898}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Tilemap (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4552,7 +4548,7 @@ GameObject:
   - component: {fileID: 1566627289}
   - component: {fileID: 1566627288}
   - component: {fileID: 1566627292}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -4721,28 +4717,14 @@ GameObject:
   - component: {fileID: 1802146395}
   - component: {fileID: 1802146394}
   - component: {fileID: 1802146393}
-  - component: {fileID: 1802146392}
   - component: {fileID: 1802146398}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Slime1
   m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1802146392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1802146391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2374a9b51dce75643b21600d50acbcac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
 --- !u!61 &1802146393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4777,7 +4759,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.4449363, y: -0.5736084}
+  m_Offset: {x: -0.10098928, y: -0.026872158}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4787,7 +4769,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17022705, y: 2.0064344}
+  m_Size: {x: 1.1512533, y: 1.1990504}
   m_EdgeRadius: 0
 --- !u!95 &1802146394
 Animator:
@@ -4876,8 +4858,8 @@ Transform:
   m_GameObject: {fileID: 1802146391}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.4, y: -1.4048157, z: 0}
-  m_LocalScale: {x: 0.48145947, y: 0.48145947, z: 0.48145947}
+  m_LocalPosition: {x: -30.788, y: -1.429, z: 0}
+  m_LocalScale: {x: 0.5665815, y: 0.5665815, z: 0.5665815}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4921,7 +4903,7 @@ GameObject:
   - component: {fileID: 1842746018}
   - component: {fileID: 1842746017}
   - component: {fileID: 1842746016}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Tilemap (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5199,7 +5181,7 @@ GameObject:
   - component: {fileID: 1936012891}
   - component: {fileID: 1936012890}
   - component: {fileID: 1936012889}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Tilemap (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5920,7 +5902,7 @@ GameObject:
   - component: {fileID: 1957117246}
   - component: {fileID: 1957117251}
   - component: {fileID: 1957117252}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Chara - BlueIdle00000_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6104,7 +6086,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1957117245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 709ee11994a2f44658e5fc9887c45081, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a3101abcfdbd7940b824c063000b585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
@@ -6114,7 +6096,7 @@ MonoBehaviour:
   respawnAudio: {fileID: 0}
   ouchAudio: {fileID: 0}
   maxSpeed: 7
-  jumpTakeOffSpeed: 7
+  jumpTakeOffSpeed: 6
   jumpState: 0
   collider2d: {fileID: 0}
   audioSource: {fileID: 0}
@@ -6129,12 +6111,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1957117245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d043a7c3af70f304694809d900e347c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 371170042646cda42ac96cc3552da8ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 54620924}
-  launchPoint: {fileID: 1006090212}
-  launchForce: 20
+  Spell: {fileID: 7953861068402118707, guid: 8e909023ef0500d4e996ab71a4152e41, type: 3}
+  launchPoint: {fileID: 1957117250}
+  launchForce: 10
 --- !u!1 &2067519311
 GameObject:
   m_ObjectHideFlags: 0
@@ -6147,7 +6129,7 @@ GameObject:
   - component: {fileID: 2067519314}
   - component: {fileID: 2067519313}
   - component: {fileID: 2067519315}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6425,7 +6407,7 @@ GameObject:
   - component: {fileID: 2099741951}
   - component: {fileID: 2099741950}
   - component: {fileID: 2099741949}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Tilemap (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

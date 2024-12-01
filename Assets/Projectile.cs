@@ -2,20 +2,22 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    public float speed = 20f;
+    public Rigidbody2D rb;
+   
+    private void Start()
     {
-        if (collision.gameObject.CompareTag("Slime"))
-        {
-           
-            Destroy(collision.gameObject);
+        rb.linearVelocity=transform.right*speed;
+    }
 
-            
-            Destroy(gameObject);
-        }
-        else
+    private void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        if (hitInfo.CompareTag("Slime"))
         {
-            
-            Destroy(gameObject, 2f); 
+            // Destroy the projectile
+            Debug.Log(hitInfo.tag);
+            Destroy(hitInfo.gameObject);
+            Destroy(gameObject);
         }
     }
 }
