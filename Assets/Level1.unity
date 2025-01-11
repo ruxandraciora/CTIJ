@@ -232,7 +232,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -4103,7 +4103,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -36.200012, y: -4.200012}
+  m_AnchoredPosition: {x: -82.69995, y: -3.2000122}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1566627287
@@ -5923,12 +5923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f16798ceacde034ebc930de9118ab09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  hearts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  fullHeart: {fileID: 0}
+  startingHealth: 0
 --- !u!1 &1958540640
 GameObject:
   m_ObjectHideFlags: 0
