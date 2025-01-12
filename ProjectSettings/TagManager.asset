@@ -6,6 +6,9 @@ TagManager:
   tags:
   - TutorialRequirement
   - Slime
+  - Enemy
+  - Shield
+  - Heart
   layers:
   - Default
   - TransparentFX

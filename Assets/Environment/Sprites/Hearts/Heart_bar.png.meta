@@ -130,12 +130,12 @@ TextureImporter:
       name: Heart_bar_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 10
-        width: 1221
-        height: 118
+        x: 5
+        y: 11
+        width: 112
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -152,12 +152,12 @@ TextureImporter:
       name: Heart_bar_1
       rect:
         serializedVersion: 2
-        x: 126
-        y: 10
-        width: 115
-        height: 114
+        x: 127
+        y: 11
+        width: 113
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -174,12 +174,12 @@ TextureImporter:
       name: Heart_bar_2
       rect:
         serializedVersion: 2
-        x: 249
-        y: 10
-        width: 114
-        height: 114
+        x: 250
+        y: 11
+        width: 112
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -196,12 +196,12 @@ TextureImporter:
       name: Heart_bar_3
       rect:
         serializedVersion: 2
-        x: 371
-        y: 10
-        width: 115
-        height: 114
+        x: 372
+        y: 11
+        width: 113
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: Heart_bar_4
       rect:
         serializedVersion: 2
-        x: 494
-        y: 10
-        width: 114
-        height: 114
+        x: 495
+        y: 11
+        width: 112
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -240,12 +240,12 @@ TextureImporter:
       name: Heart_bar_5
       rect:
         serializedVersion: 2
-        x: 616
-        y: 10
-        width: 115
-        height: 114
+        x: 617
+        y: 11
+        width: 113
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -262,12 +262,12 @@ TextureImporter:
       name: Heart_bar_6
       rect:
         serializedVersion: 2
-        x: 739
-        y: 10
-        width: 114
-        height: 114
+        x: 740
+        y: 11
+        width: 112
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -284,12 +284,12 @@ TextureImporter:
       name: Heart_bar_7
       rect:
         serializedVersion: 2
-        x: 861
-        y: 10
-        width: 115
-        height: 114
+        x: 862
+        y: 11
+        width: 113
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -306,12 +306,12 @@ TextureImporter:
       name: Heart_bar_8
       rect:
         serializedVersion: 2
-        x: 984
-        y: 10
-        width: 114
-        height: 114
+        x: 985
+        y: 11
+        width: 112
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -328,12 +328,12 @@ TextureImporter:
       name: Heart_bar_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 10
-        width: 1221
-        height: 117
+        x: 1107
+        y: 11
+        width: 113
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

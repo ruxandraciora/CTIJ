@@ -1,23 +1,32 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class enemyPatrol : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
     public Transform[] patrolPoints;
     public float moveSpeed;
     public int patrolDestination;
-  
 
-    // Update is called once per frame
+    private Vector3 initialPosition;  // Poziția inițială a inamicului
+
+    void Start()
+    {
+        initialPosition = transform.position;  // Salvează poziția inițială
+    }
+
     void Update()
     {
-        if(patrolDestination == 0)
+        if (patrolPoints.Length < 2)
         {
-            transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position,moveSpeed*Time.deltaTime);
-            if (Vector2.Distance(transform.position, patrolPoints[0].position)<.2f)
+            Debug.LogWarning("Not enough patrol points assigned!");
+            return; // Oprește execuția dacă nu sunt suficiente puncte
+        }
+
+        if (patrolDestination == 0)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, moveSpeed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, patrolPoints[0].position) < .2f)
             {
-                transform.localScale=new Vector3(0.5f,0.5f,1);
+                transform.localScale = new Vector3(0.5f, 0.5f, 1);
                 patrolDestination = 1;
             }
         }
@@ -31,5 +40,13 @@ public class enemyPatrol : MonoBehaviour
                 patrolDestination = 0;
             }
         }
+    }
+
+
+    public void ResetEnemy()
+    {
+        transform.position = initialPosition; // Resetează poziția
+        gameObject.SetActive(true);           // Reactivează inamicul (dacă era dezactivat)
+        Debug.Log("Enemy reset to initial position.");
     }
 }

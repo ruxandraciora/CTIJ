@@ -8,29 +8,19 @@ using Platformer.Core;
 
 namespace Platformer.Mechanics
 {
-    /// <summary>
-    /// This is the main class used to implement control of the player.
-    /// It is a superset of the AnimationController class, but is inlined to allow for any kind of customisation.
-    /// </summary>
     public class PlayerController : KinematicObject
     {
         public AudioClip jumpAudio;
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
 
-        /// <summary>
-        /// Max horizontal speed of the player.
-        /// </summary>
         public float maxSpeed = 7;
-        /// <summary>
-        /// Initial jump velocity at the start of a jump.
-        /// </summary>
         public float jumpTakeOffSpeed = 20;
 
         public JumpState jumpState = JumpState.Grounded;
         private bool stopJump;
-        /*internal new*/ public Collider2D collider2d;
-        /*internal new*/ public AudioSource audioSource;
+        public Collider2D collider2d;
+        public AudioSource audioSource;
         public Health health;
         public bool controlEnabled = true;
 
@@ -39,6 +29,15 @@ namespace Platformer.Mechanics
         SpriteRenderer spriteRenderer;
         internal Animator animator;
         readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
+
+        // Variabile pentru efectul de blitz
+        public Color blitzColor = Color.white;
+        public float blitzDuration = 0.5f;
+        private bool isBlitzActive = false;
+        private Color originalColor;
+
+        // Variabilă pentru starea scutului
+        public bool isShieldActive = false;
 
         public Bounds Bounds => collider2d.bounds;
 
@@ -49,6 +48,9 @@ namespace Platformer.Mechanics
             collider2d = GetComponent<Collider2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             animator = GetComponent<Animator>();
+
+            // Salvează culoarea originală a sprite-ului
+            originalColor = spriteRenderer.color;
         }
 
         protected override void Update()
@@ -127,6 +129,63 @@ namespace Platformer.Mechanics
             animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
             targetVelocity = move * maxSpeed;
+        }
+
+        /// <summary>
+        /// Activează efectul de blitz atunci când player-ul atinge un obiect cu tag-ul "Slime",
+        /// dar doar dacă scutul nu este activ.
+        /// </summary>
+        /// <param name="other">Obiectul cu care player-ul a intrat în trigger</param>
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("Slime"))
+            {
+                // Verifică dacă scutul este activ. Dacă nu este, activează efectul de blitz
+                if (!isShieldActive && !isBlitzActive)
+                {
+                    StartCoroutine(ActivateBlitzEffect());
+                    Debug.Log("Player has triggered with a Slime!");
+                }
+                
+            }
+        }
+
+        /// <summary>
+        /// Corutină pentru a activa un efect vizual de blitz.
+        /// </summary>
+        IEnumerator ActivateBlitzEffect()
+        {
+            isBlitzActive = true;
+
+            // Schimbă culoarea sprite-ului în blitzColor
+            spriteRenderer.color = blitzColor;
+
+            // Așteaptă durata efectului de blitz
+            yield return new WaitForSeconds(blitzDuration);
+
+            // Resetează culoarea sprite-ului la culoarea originală
+            spriteRenderer.color = originalColor;
+
+            isBlitzActive = false;
+        }
+
+        /// <summary>
+        /// Activează scutul pentru o anumită durată.
+        /// </summary>
+        public void ActivateShield(float duration)
+        {
+            StartCoroutine(ShieldCoroutine(duration));
+        }
+
+        private IEnumerator ShieldCoroutine(float duration)
+        {
+            isShieldActive = true;
+            Debug.Log("Shield activated.");
+
+            yield return new WaitForSeconds(duration);
+
+            isShieldActive = false;
+            Debug.Log("Shield deactivated.");
         }
 
         public enum JumpState

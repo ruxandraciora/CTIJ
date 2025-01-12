@@ -163,8 +163,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7953861068402118707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ed3038a699089e4d9d6a8d7f27a0da1, type: 3}
+  m_Script: {fileID: 11500000, guid: bfd89cc93f9b71148a76e989159b19c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  maxDistance: 10
   rb: {fileID: 6533605780492690443}
