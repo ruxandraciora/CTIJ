@@ -7,4 +7,9 @@ public class StartPage : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(1);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

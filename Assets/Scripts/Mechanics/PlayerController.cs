@@ -131,24 +131,29 @@ namespace Platformer.Mechanics
             targetVelocity = move * maxSpeed;
         }
 
-        /// <summary>
-        /// Activează efectul de blitz atunci când player-ul atinge un obiect cu tag-ul "Slime",
-        /// dar doar dacă scutul nu este activ.
-        /// </summary>
-        /// <param name="other">Obiectul cu care player-ul a intrat în trigger</param>
         void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Slime"))
             {
-                // Verifică dacă scutul este activ. Dacă nu este, activează efectul de blitz
-                if (!isShieldActive && !isBlitzActive)
+                // Verifică dacă scutul este activ. Dacă da, nu activa efectul de blitz
+                if (isShieldActive)
+                {
+                    Debug.Log("Shield is active. Blitz effect will not trigger.");
+                    return;
+                }
+
+                // Activează efectul de blitz dacă blitz-ul nu este deja activ
+                if (!isBlitzActive)
                 {
                     StartCoroutine(ActivateBlitzEffect());
                     Debug.Log("Player has triggered with a Slime!");
                 }
-                
             }
         }
+
+
+
+
 
         /// <summary>
         /// Corutină pentru a activa un efect vizual de blitz.

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Platformer.Mechanics;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,18 +17,22 @@ public class PlayerHealth : MonoBehaviour
 
     private GameManager gameManager;     // Referință către GameManager
 
+    private bool isInvulnerable = false;     // Indicator dacă player-ul este invulnerabil
+    public float invulnerabilityDuration = 1f; // Durata invulnerabilității în secunde
+    private PlayerController playerController;
+
+
     private void Start()
     {
-        // Salvează poziția inițială a jucătorului
         initialPosition = transform.position;
-
-        // Inițializează numărul de vieți și actualizează inimile
         currentLives = maxLives;
         UpdateHeartsUI();
-
-        // Găsește GameManager-ul în scenă
         gameManager = FindObjectOfType<GameManager>();
+
+        // Asigură-te că ai o referință validă la PlayerController
+        playerController = GetComponent<PlayerController>();
     }
+
 
     private void Update()
     {
@@ -41,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
         // Verifică dacă jucătorul a căzut sub limită
         if (transform.position.y <= fallLimitY && !isGameOver)
         {
-            Die();
+            FallOffPlatform();
         }
     }
 
@@ -53,12 +59,20 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void TakeDamage()
+    public void TakeDamage()
     {
+        // Dacă scutul este activ sau player-ul este invulnerabil, nu ia damage
+        if (playerController != null && (playerController.isShieldActive || isInvulnerable))
+        {
+            Debug.Log("Damage blocked: Shield or invulnerability is active.");
+            return;
+        }
+
         if (currentLives > 0)
         {
             currentLives--;          // Scade o viață
             UpdateHeartsUI();        // Actualizează UI-ul inimilor
+            StartCoroutine(InvulnerabilityCoroutine()); // Activează invulnerabilitatea temporară
         }
 
         if (currentLives <= 0)
@@ -66,6 +80,17 @@ public class PlayerHealth : MonoBehaviour
             Die();
         }
     }
+
+
+
+    private IEnumerator InvulnerabilityCoroutine()
+    {
+        isInvulnerable = true;
+        yield return new WaitForSeconds(invulnerabilityDuration); // Așteaptă durata invulnerabilității
+        isInvulnerable = false;
+    }
+
+
 
     private void UpdateHeartsUI()
     {
@@ -88,9 +113,35 @@ public class PlayerHealth : MonoBehaviour
         ShowGameOverUI();
     }
 
+    private void FallOffPlatform()
+    {
+        Debug.Log("Player fell off the platform!");
+
+        // Scade o viață
+        TakeDamage();
+
+        if (currentLives > 0)
+        {
+            // Repoziționează jucătorul la poziția inițială dacă mai are vieți
+            transform.position = initialPosition;
+        }
+    }
+   
+
+
     private void ShowGameOverUI()
     {
         Debug.Log("Game Over! Press R to restart.");
         // Poți afișa un UI personalizat pentru Game Over aici
+    }
+
+    public void ResetPlayer()
+    {
+        Debug.Log("Resetting player...");
+        isGameOver = false;
+        currentLives = maxLives;     // Resetează numărul de vieți
+        UpdateHeartsUI();            // Actualizează UI-ul inimilor
+        transform.position = initialPosition;  // Repoziționează jucătorul la poziția inițială
+        Time.timeScale = 1f;         // Reia timpul de joc
     }
 }

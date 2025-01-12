@@ -26,7 +26,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Camera position: " + Camera.main.transform.position);
         // Resetează timpul de joc
         Time.timeScale = 1f;
-        Camera.main.transform.position = initialCameraPosition;
+       // Camera.main.transform.position = initialCameraPosition;
+        playerTransform.GetComponent<PlayerHealth>().ResetPlayer();
+
         // Resetează poziția jucătorului la poziția inițială
         if (playerTransform != null)
     {

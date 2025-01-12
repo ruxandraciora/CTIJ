@@ -310,7 +310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enchanted Journey
+  m_text: Game over!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99c0cb49ab9a14249852fefca9970079, type: 2}
   m_sharedMaterial: {fileID: 5756016170972850897, guid: 99c0cb49ab9a14249852fefca9970079,
@@ -972,7 +972,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: Try again?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99c0cb49ab9a14249852fefca9970079, type: 2}
   m_sharedMaterial: {fileID: 5756016170972850897, guid: 99c0cb49ab9a14249852fefca9970079,

@@ -1,30 +1,52 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    private GameObject[] enemies;  // Array pentru inamicii existenți în scenă
+    private GameObject[] enemies;      // Toți inamicii din scenă
+    private Vector3[] initialPositions;  // Pozițiile inițiale ale inamicilor
+    private GameObject[] initialEnemies;  // Copia inițială a inamicilor
+
 
     void Start()
     {
-        // Găsește toți inamicii cu tag-ul "Slime" din scenă
+        // Găsește toți inamicii din scenă
         enemies = GameObject.FindGameObjectsWithTag("Slime");
+
+        // Inițializează array-urile pentru inamici și poziții
+        initialEnemies = new GameObject[enemies.Length];
+        initialPositions = new Vector3[enemies.Length];
+
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            initialPositions[i] = enemies[i].transform.position;
+
+            // Fă o copie a fiecărui inamic inițial
+            initialEnemies[i] = Instantiate(enemies[i], initialPositions[i], Quaternion.identity);
+            initialEnemies[i].SetActive(false);  // Dezactivează copia pentru a nu apărea în scenă la început
+        }
     }
+
 
     public void ResetEnemies()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Slime");
+        Debug.Log("ResetEnemies called");
 
-        
-        foreach (GameObject enemy in enemies)
+        // Distruge toți inamicii existenți în scenă
+        foreach (var enemy in enemies)
         {
-            enemyPatrol patrol = enemy.GetComponent<enemyPatrol>();
-            //Debug.Log("Enemy position after reset: " + enemy.transform.position);
-            if (patrol != null)
+            if (enemy != null)
             {
-                patrol.ResetEnemy();
-                Debug.Log("Enemy reset: " + enemy.name);
+                Destroy(enemy);
             }
+        }
+
+        // Recreează inamicii folosind copiile inițiale
+        enemies = new GameObject[initialEnemies.Length];
+        for (int i = 0; i < initialEnemies.Length; i++)
+        {
+            enemies[i] = Instantiate(initialEnemies[i], initialPositions[i], Quaternion.identity);
+            enemies[i].SetActive(true);  // Activează inamicul
+            Debug.Log("Enemy recreated: " + enemies[i].name);
         }
     }
 
@@ -32,11 +54,29 @@ public class EnemyManager : MonoBehaviour
 
     public void DestroyEnemies()
     {
-        foreach (var enemy in enemies)
+        // Dezactivează toți inamicii existenți
+        for (int i = 0; i < enemies.Length; i++)
         {
-            if (enemy != null)
+            if (enemies[i] != null)
             {
-                enemy.SetActive(false);  // Dezactivează inamicul în loc să-l distrugă
+                enemies[i].SetActive(false);  // Dezactivează inamicul
+                Debug.Log("Enemy deactivated: " + enemies[i].name);
+            }
+        }
+    }
+
+
+    private void DebugEnemiesState()
+    {
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            if (enemies[i] != null)
+            {
+                Debug.Log($"Enemy {i}: {enemies[i].name}, Active: {enemies[i].activeSelf}, Position: {enemies[i].transform.position}");
+            }
+            else
+            {
+                Debug.LogWarning($"Enemy {i} is null.");
             }
         }
     }
