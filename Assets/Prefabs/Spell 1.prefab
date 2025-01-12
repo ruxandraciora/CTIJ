@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7441738355239121416}
   - component: {fileID: 6533605780492690443}
   - component: {fileID: 1534464148467502736}
-  - component: {fileID: -4761208112714369303}
+  - component: {fileID: -2776446209686750018}
   m_Layer: 1
   m_Name: Spell 1
   m_TagString: Untagged
@@ -154,7 +154,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2.13
---- !u!114 &-4761208112714369303
+--- !u!114 &-2776446209686750018
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,5 +167,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  maxDistance: 13
+  maxDistance: 16
   rb: {fileID: 6533605780492690443}

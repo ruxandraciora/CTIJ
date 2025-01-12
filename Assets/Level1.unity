@@ -3368,7 +3368,7 @@ Transform:
   m_GameObject: {fileID: 1006090211}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.27, y: -0.44, z: -58.360077}
+  m_LocalPosition: {x: 0.8, y: -0.44, z: -58.360077}
   m_LocalScale: {x: 0.6408562, y: 1.0412035, z: 1.4188054}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5131,9 +5131,9 @@ GameObject:
   - component: {fileID: 1957117248}
   - component: {fileID: 1957117247}
   - component: {fileID: 1957117246}
-  - component: {fileID: 1957117251}
   - component: {fileID: 1957117252}
   - component: {fileID: 1957117253}
+  - component: {fileID: 1957117254}
   m_Layer: 1
   m_Name: Chara - BlueIdle00000_0
   m_TagString: Untagged
@@ -5308,31 +5308,6 @@ Transform:
   - {fileID: 1006090212}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1957117251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1957117245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3101abcfdbd7940b824c063000b585, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minGroundNormalY: 0.65
-  gravityModifier: 1
-  velocity: {x: 0, y: 0}
-  jumpAudio: {fileID: 0}
-  respawnAudio: {fileID: 0}
-  ouchAudio: {fileID: 0}
-  maxSpeed: 6
-  jumpTakeOffSpeed: 4
-  jumpState: 0
-  collider2d: {fileID: 0}
-  audioSource: {fileID: 0}
-  health: {fileID: 0}
-  controlEnabled: 1
 --- !u!114 &1957117252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5361,6 +5336,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 0
+--- !u!114 &1957117254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957117245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3101abcfdbd7940b824c063000b585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minGroundNormalY: 0.65
+  gravityModifier: 1
+  velocity: {x: 0, y: 0}
+  jumpAudio: {fileID: 0}
+  respawnAudio: {fileID: 0}
+  ouchAudio: {fileID: 0}
+  maxSpeed: 7
+  jumpTakeOffSpeed: 6
+  jumpState: 0
+  collider2d: {fileID: 0}
+  audioSource: {fileID: 0}
+  health: {fileID: 0}
+  controlEnabled: 1
+  launchPoint: {fileID: 0}
 --- !u!1 &1958540640
 GameObject:
   m_ObjectHideFlags: 0

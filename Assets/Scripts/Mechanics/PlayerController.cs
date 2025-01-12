@@ -8,29 +8,19 @@ using Platformer.Core;
 
 namespace Platformer.Mechanics
 {
-    /// <summary>
-    /// This is the main class used to implement control of the player.
-    /// It is a superset of the AnimationController class, but is inlined to allow for any kind of customisation.
-    /// </summary>
     public class PlayerController : KinematicObject
     {
         public AudioClip jumpAudio;
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
 
-        /// <summary>
-        /// Max horizontal speed of the player.
-        /// </summary>
         public float maxSpeed = 7;
-        /// <summary>
-        /// Initial jump velocity at the start of a jump.
-        /// </summary>
         public float jumpTakeOffSpeed = 20;
 
         public JumpState jumpState = JumpState.Grounded;
         private bool stopJump;
-        /*internal new*/ public Collider2D collider2d;
-        /*internal new*/ public AudioSource audioSource;
+        public Collider2D collider2d;
+        public AudioSource audioSource;
         public Health health;
         public bool controlEnabled = true;
 
@@ -39,6 +29,9 @@ namespace Platformer.Mechanics
         SpriteRenderer spriteRenderer;
         internal Animator animator;
         readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
+
+        // Adăugăm referința la launchPoint
+        public Transform launchPoint;
 
         public Bounds Bounds => collider2d.bounds;
 
@@ -70,6 +63,22 @@ namespace Platformer.Mechanics
             }
             UpdateJumpState();
             base.Update();
+            UpdateLaunchPointDirection();  // Actualizare direcție launchPoint
+        }
+
+        void UpdateLaunchPointDirection()
+        {
+            // Actualizează direcția launchPoint în funcție de mișcarea jucătorului
+            if (move.x > 0.01f)
+            {
+                spriteRenderer.flipX = false;  // Direcția dreapta
+                launchPoint.localRotation = Quaternion.Euler(0, 0, 0);  // Lansează spre dreapta
+            }
+            else if (move.x < -0.01f)
+            {
+                spriteRenderer.flipX = true;   // Direcția stanga
+                launchPoint.localRotation = Quaternion.Euler(0, 180, 0);  // Lansează spre stânga
+            }
         }
 
         void UpdateJumpState()
@@ -117,11 +126,6 @@ namespace Platformer.Mechanics
                     velocity.y = velocity.y * model.jumpDeceleration;
                 }
             }
-
-            if (move.x > 0.01f)
-                spriteRenderer.flipX = false;
-            else if (move.x < -0.01f)
-                spriteRenderer.flipX = true;
 
             animator.SetBool("grounded", IsGrounded);
             animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
