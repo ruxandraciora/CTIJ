@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\Projects\\CTIJ\\Game\\Version2\\CTIJ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C0A2850F-B6F6-DD1F-8C96-A76B363C12EC}|Assembly-CSharp.csproj|D:\\Projects\\CTIJ\\Game\\Version2\\CTIJ\\assets\\scripts\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0A2850F-B6F6-DD1F-8C96-A76B363C12EC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C0A2850F-B6F6-DD1F-8C96-A76B363C12EC}|Assembly-CSharp.csproj|d:\\projects\\ctij\\game\\version2\\ctij\\assets\\scripts\\mechanics\\kinematicobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0A2850F-B6F6-DD1F-8C96-A76B363C12EC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mechanics\\kinematicobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0A2850F-B6F6-DD1F-8C96-A76B363C12EC}|Assembly-CSharp.csproj|d:\\projects\\ctij\\game\\version2\\ctij\\assets\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C0A2850F-B6F6-DD1F-8C96-A76B363C12EC}|Assembly-CSharp.csproj|d:\\projects\\ctij\\game\\version2\\ctij\\assets\\scripts\\mechanics\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0A2850F-B6F6-DD1F-8C96-A76B363C12EC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mechanics\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0A2850F-B6F6-DD1F-8C96-A76B363C12EC}|Assembly-CSharp.csproj|D:\\Projects\\CTIJ\\Game\\Version2\\CTIJ\\assets\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C0A2850F-B6F6-DD1F-8C96-A76B363C12EC}|Assembly-CSharp.csproj|solutionrelative:assets\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0A2850F-B6F6-DD1F-8C96-A76B363C12EC}|Assembly-CSharp.csproj|D:\\Projects\\CTIJ\\Game\\Version2\\CTIJ\\assets\\playerattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0A2850F-B6F6-DD1F-8C96-A76B363C12EC}|Assembly-CSharp.csproj|solutionrelative:assets\\playerattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0A2850F-B6F6-DD1F-8C96-A76B363C12EC}|Assembly-CSharp.csproj|D:\\Projects\\CTIJ\\Game\\Version2\\CTIJ\\assets\\scripts\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0A2850F-B6F6-DD1F-8C96-A76B363C12EC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,24 +30,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KinematicObject.cs",
+              "DocumentMoniker": "D:\\Projects\\CTIJ\\Game\\Version2\\CTIJ\\Assets\\Scripts\\Mechanics\\KinematicObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Mechanics\\KinematicObject.cs",
+              "ToolTip": "D:\\Projects\\CTIJ\\Game\\Version2\\CTIJ\\Assets\\Scripts\\Mechanics\\KinematicObject.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Mechanics\\KinematicObject.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAApwFQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T12:16:39.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "D:\\Projects\\CTIJ\\Game\\Version2\\CTIJ\\Assets\\Scripts\\Mechanics\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Mechanics\\PlayerController.cs",
+              "ToolTip": "D:\\Projects\\CTIJ\\Game\\Version2\\CTIJ\\Assets\\Scripts\\Mechanics\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Mechanics\\PlayerController.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAlwH0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T10:05:30.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlayerAttack.cs",
+              "DocumentMoniker": "D:\\Projects\\CTIJ\\Game\\Version2\\CTIJ\\Assets\\PlayerAttack.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerAttack.cs",
+              "ToolTip": "D:\\Projects\\CTIJ\\Game\\Version2\\CTIJ\\Assets\\PlayerAttack.cs",
+              "RelativeToolTip": "Assets\\PlayerAttack.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T09:29:07.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Projectile.cs",
               "DocumentMoniker": "D:\\Projects\\CTIJ\\Game\\Version2\\CTIJ\\Assets\\Projectile.cs",
               "RelativeDocumentMoniker": "Assets\\Projectile.cs",
               "ToolTip": "D:\\Projects\\CTIJ\\Game\\Version2\\CTIJ\\Assets\\Projectile.cs",
               "RelativeToolTip": "Assets\\Projectile.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAwAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wBYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T10:25:36.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T10:25:36.269Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "PlayerHealth.cs",
               "DocumentMoniker": "D:\\Projects\\CTIJ\\Game\\Version2\\CTIJ\\Assets\\Scripts\\Health\\PlayerHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Health\\PlayerHealth.cs",
@@ -43,8 +92,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Health\\PlayerHealth.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T09:43:14.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T09:43:14.343Z"
             }
           ]
         }
