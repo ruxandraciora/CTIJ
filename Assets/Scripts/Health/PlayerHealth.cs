@@ -2,25 +2,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxLives = 3;             // Numărul maxim de vieți
-    private int currentLives;            // Numărul curent de vieți
+    public int maxLives = 3;
+    private int currentLives;
 
-    public Image[] heartImages;          // Array cu imaginile inimilor din UI
-    public float fallLimitY = -10f;      // Limita sub care jucătorul este considerat căzut
+    public Image[] heartImages;
+    public float fallLimitY = -10f;
 
-    private bool isGameOver = false;     // Indicator pentru starea de Game Over
-    private Vector3 initialPosition;     // Poziția inițială a jucătorului
+    private bool isGameOver = false;
+    private Vector3 initialPosition;
 
-    private GameManager gameManager;     // Referință către GameManager
+    private GameManager gameManager;
 
-    private bool isInvulnerable = false;     // Indicator dacă player-ul este invulnerabil
-    public float invulnerabilityDuration = 1f; // Durata invulnerabilității în secunde
+    private bool isInvulnerable = false;
+    public float invulnerabilityDuration = 1f;
     private PlayerController playerController;
-
 
     private void Start()
     {
@@ -29,10 +29,8 @@ public class PlayerHealth : MonoBehaviour
         UpdateHeartsUI();
         gameManager = FindObjectOfType<GameManager>();
 
-        // Asigură-te că ai o referință validă la PlayerController
         playerController = GetComponent<PlayerController>();
     }
-
 
     private void Update()
     {
@@ -44,7 +42,6 @@ public class PlayerHealth : MonoBehaviour
                 Debug.LogWarning("GameManager is not set in PlayerHealth!");
         }
 
-        // Verifică dacă jucătorul a căzut sub limită
         if (transform.position.y <= fallLimitY && !isGameOver)
         {
             FallOffPlatform();
@@ -61,7 +58,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage()
     {
-        // Dacă scutul este activ sau player-ul este invulnerabil, nu ia damage
         if (playerController != null && (playerController.isShieldActive || isInvulnerable))
         {
             Debug.Log("Damage blocked: Shield or invulnerability is active.");
@@ -70,9 +66,9 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentLives > 0)
         {
-            currentLives--;          // Scade o viață
-            UpdateHeartsUI();        // Actualizează UI-ul inimilor
-            StartCoroutine(InvulnerabilityCoroutine()); // Activează invulnerabilitatea temporară
+            currentLives--;
+            UpdateHeartsUI();
+            StartCoroutine(InvulnerabilityCoroutine());
         }
 
         if (currentLives <= 0)
@@ -81,20 +77,15 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-
-
     private IEnumerator InvulnerabilityCoroutine()
     {
         isInvulnerable = true;
-        yield return new WaitForSeconds(invulnerabilityDuration); // Așteaptă durata invulnerabilității
+        yield return new WaitForSeconds(invulnerabilityDuration);
         isInvulnerable = false;
     }
 
-
-
     private void UpdateHeartsUI()
     {
-        // Dezactivează inimile rămase în funcție de viețile curente
         for (int i = 0; i < heartImages.Length; i++)
         {
             heartImages[i].enabled = i < currentLives;
@@ -105,11 +96,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player has died!");
         isGameOver = true;
-
-        // Oprește timpul de joc
         Time.timeScale = 0f;
-
-        // Afișează un mesaj de Game Over sau UI (dacă ai unul)
         ShowGameOverUI();
     }
 
@@ -117,31 +104,26 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player fell off the platform!");
 
-        // Scade o viață
         TakeDamage();
 
         if (currentLives > 0)
         {
-            // Repoziționează jucătorul la poziția inițială dacă mai are vieți
             transform.position = initialPosition;
         }
     }
-   
-
 
     private void ShowGameOverUI()
     {
-        Debug.Log("Game Over! Press R to restart.");
-        // Poți afișa un UI personalizat pentru Game Over aici
+        SceneManager.LoadScene("GameOver");
     }
 
     public void ResetPlayer()
     {
         Debug.Log("Resetting player...");
         isGameOver = false;
-        currentLives = maxLives;     // Resetează numărul de vieți
-        UpdateHeartsUI();            // Actualizează UI-ul inimilor
-        transform.position = initialPosition;  // Repoziționează jucătorul la poziția inițială
-        Time.timeScale = 1f;         // Reia timpul de joc
+        currentLives = maxLives;
+        UpdateHeartsUI();
+        transform.position = initialPosition;
+        Time.timeScale = 1f;
     }
 }

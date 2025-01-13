@@ -6,17 +6,14 @@ TagManager:
   tags:
   - TutorialRequirement
   - Slime
-  - Enemy
-  - Shield
-  - Heart
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
-  - 
+  - Middle
   - 
   - 
   - 
@@ -48,6 +45,12 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 23384827
+    locked: 0
+  - name: Middle
+    uniqueID: 3667231459
+    locked: 0
+  - name: Foreground
+    uniqueID: 2622926489
     locked: 0
   - name: Tiles
     uniqueID: 3993885699

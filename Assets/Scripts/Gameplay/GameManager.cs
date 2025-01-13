@@ -1,56 +1,57 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public Transform playerTransform;           // Referință la transform-ul jucătorului
-    public Vector3 initialPosition;             // Poziția inițială a jucătorului
-    public EnemyManager enemyManager;           // Referință la EnemyManager
-    private Vector3 initialCameraPosition;
+    private Transform playerTransform;
+    public EnemyManager enemyManager;
 
     void Start()
     {
+        playerTransform = GameObject.FindWithTag("Player")?.transform;
+
         if (playerTransform == null)
         {
-            Debug.LogError("Player transform is not assigned in the Inspector!");
-            playerTransform = GameObject.FindWithTag("Player")?.transform;
+            Debug.LogError("Player not found in the scene!");
+        }
+    }
+
+    public void LoadNextLevel(string nextLevelName)
+    {
+        if (playerTransform != null)
+        {
+            Destroy(playerTransform.gameObject); // Distruge player-ul existent
         }
 
-        initialPosition = playerTransform.position;
-        initialCameraPosition = Camera.main.transform.position;  // Salvează poziția inițială a camerei
+        SceneManager.LoadScene("Level2"); // Încarcă următorul nivel
     }
 
 
     public void RestartGame()
-{
-    Debug.Log("Restarting game...");
-        Debug.Log("Camera position: " + Camera.main.transform.position);
-        // Resetează timpul de joc
+    {
+        Debug.Log("Restarting game...");
+
         Time.timeScale = 1f;
-       // Camera.main.transform.position = initialCameraPosition;
-        playerTransform.GetComponent<PlayerHealth>().ResetPlayer();
 
-        // Resetează poziția jucătorului la poziția inițială
         if (playerTransform != null)
-    {
-        playerTransform.position = initialPosition;
-    }
-    else
-    {
-        Debug.LogError("Player transform is not assigned!");
-    }
+        {
+            playerTransform.GetComponent<PlayerHealth>().ResetPlayer();
+        }
+        else
+        {
+            Debug.LogError("Player transform is not assigned!");
+        }
 
-    // Resetează inamicii existenți
-    if (enemyManager != null)
-    {
-        Debug.Log("Calling ResetEnemies...");
-        enemyManager.ResetEnemies();
-    }
-    else
-    {
-        Debug.LogError("EnemyManager is not assigned!");
-    }
+        if (enemyManager != null)
+        {
+            Debug.Log("Calling ResetEnemies...");
+            enemyManager.ResetEnemies();
+        }
+        else
+        {
+            Debug.LogError("EnemyManager is not assigned!");
+        }
 
-    Debug.Log("Game restarted!");
-}
-
+        Debug.Log("Game restarted!");
+    }
 }

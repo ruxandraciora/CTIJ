@@ -5,7 +5,8 @@ public class StartPage : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync(1);
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Level1");
     }
 
     public void QuitGame()

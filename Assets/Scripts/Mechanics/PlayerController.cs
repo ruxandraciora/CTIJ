@@ -106,30 +106,43 @@ namespace Platformer.Mechanics
 
         protected override void ComputeVelocity()
         {
+            animator.SetFloat("velocityX", Mathf.Abs(velocity.x));
+
             if (jump && IsGrounded)
             {
                 velocity.y = jumpTakeOffSpeed * model.jumpModifier;
                 jump = false;
+                animator.SetTrigger("jump"); // Activează animația de săritură
             }
             else if (stopJump)
             {
                 stopJump = false;
                 if (velocity.y > 0)
                 {
-                    velocity.y = velocity.y * model.jumpDeceleration;
+                    velocity.y *= 0.5f;
                 }
             }
 
+            // Aplicație de gravitație suplimentară la cădere
+            if (velocity.y < 0)
+            {
+                velocity.y += Physics2D.gravity.y * 2 * Time.deltaTime;
+            }
+
+            // Controlează direcția sprite-ului în funcție de direcția de mers
             if (move.x > 0.01f)
                 spriteRenderer.flipX = false;
             else if (move.x < -0.01f)
                 spriteRenderer.flipX = true;
 
-            animator.SetBool("grounded", IsGrounded);
-            animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
+            // Actualizează parametrii animației
+            animator.SetBool("grounded", IsGrounded);                        // Setează dacă este pe sol
+            animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed); // Setează viteza orizontală
 
             targetVelocity = move * maxSpeed;
         }
+
+
 
         void OnTriggerEnter2D(Collider2D other)
         {
