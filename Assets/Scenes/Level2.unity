@@ -874,7 +874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e74a5e3a75ae03b44905b096e80d6689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spell: {fileID: 7953861068402118707, guid: 8e909023ef0500d4e996ab71a4152e41, type: 3}
+  Spell: {fileID: 7953861068402118707, guid: 7e95840344aa98044b4892d9467a23e5, type: 3}
   launchPoint: {fileID: 280947613}
   launchForce: 30
 --- !u!114 &280947607
