@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour
     {
 
         startPosition = transform.position;
-        rb.linearVelocity=transform.right*speed;
+        rb.linearVelocity = transform.right * speed;
     }
     private void Update()
     {

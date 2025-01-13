@@ -39,6 +39,9 @@ namespace Platformer.Mechanics
         // Variabilă pentru starea scutului
         public bool isShieldActive = false;
 
+        // Adăugăm referința la launchPoint
+        public Transform launchPoint;
+
         public Bounds Bounds => collider2d.bounds;
 
         void Awake()
@@ -72,6 +75,23 @@ namespace Platformer.Mechanics
             }
             UpdateJumpState();
             base.Update();
+            UpdateLaunchPointDirection();  // Actualizare direcție launchPoint
+        }
+
+
+        void UpdateLaunchPointDirection()
+        {
+            // Actualizează direcția launchPoint în funcție de mișcarea jucătorului
+            if (move.x > 0.01f)
+            {
+                spriteRenderer.flipX = false;  // Direcția dreapta
+                launchPoint.localRotation = Quaternion.Euler(0, 0, 0);  // Lansează spre dreapta
+            }
+            else if (move.x < -0.01f)
+            {
+                spriteRenderer.flipX = true;   // Direcția stanga
+                launchPoint.localRotation = Quaternion.Euler(0, 180, 0);  // Lansează spre stânga
+            }
         }
 
         void UpdateJumpState()
@@ -83,7 +103,9 @@ namespace Platformer.Mechanics
                     jumpState = JumpState.Jumping;
                     jump = true;
                     stopJump = false;
+                    animator.SetTrigger("jump"); // Activează animația de săritură
                     break;
+
                 case JumpState.Jumping:
                     if (!IsGrounded)
                     {
@@ -91,6 +113,7 @@ namespace Platformer.Mechanics
                         jumpState = JumpState.InFlight;
                     }
                     break;
+
                 case JumpState.InFlight:
                     if (IsGrounded)
                     {
@@ -98,10 +121,14 @@ namespace Platformer.Mechanics
                         jumpState = JumpState.Landed;
                     }
                     break;
+
                 case JumpState.Landed:
                     jumpState = JumpState.Grounded;
                     break;
             }
+
+            // Actualizează parametrii animației
+            animator.SetBool("grounded", IsGrounded); // Setează dacă este pe sol
         }
 
         protected override void ComputeVelocity()
@@ -142,8 +169,6 @@ namespace Platformer.Mechanics
             targetVelocity = move * maxSpeed;
         }
 
-
-
         void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Slime"))
@@ -163,10 +188,6 @@ namespace Platformer.Mechanics
                 }
             }
         }
-
-
-
-
 
         /// <summary>
         /// Corutină pentru a activa un efect vizual de blitz.
